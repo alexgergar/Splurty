@@ -11,7 +11,7 @@
 
   <body>
     <header class="row">
-      <div class="col-3">
+      <div class="col-2">
         <%= link_to root_path, class: 'logo' do %>
 
             <div class="circle">
@@ -24,11 +24,12 @@
           </div>
         <% end %>
       </div>
-      <div class="col-4 slogan">
+      <div class="col col-sm-4 hidden-xs-down slogan">
         Splurting out unsolicited advice about entrepreneurship since 2016.
       </div>
-      <div class="col-5 links">
+      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
         <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %> 
+        &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
 
@@ -45,11 +46,12 @@
               </button>
               <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
             </div>
-            
+
             <%= simple_form_for Quote.new do |f| %>
               <div class="modal-body">           
-                    <%= f.input :saying %>
-                    <%= f.input :author %>
+                    <%= f.input :saying, label: "What quote would you like to add?", placeholder: "Fear is the disease. Hustle is the antidote." %>
+                    <br />
+                    <%= f.input :author, label: "Who is the author to that quote?", placeholder: "Travis Kalanick" %>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -77,10 +79,10 @@
     <div class="footer">
       <div class="container">
           <div class="row">
-              <div class='col-6'>
+              <div class="col-12 col-sm-6">
                 <%= link_to "This isn't enough, I need more!", root_path, class: 'next-quote' %>
               </div>
-              <div class="col-6 footer-blurb">
+              <div class="col-12 col-sm-6 footer-blurb">
                   Coded by <a href="https://alexandragergar.netlify.com/">Alexandra Gergar</a>
               </div>
           </div>
