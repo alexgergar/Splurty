@@ -11,27 +11,28 @@
 
   <body>
     <header class="row">
-      <div class="col-2">
-        <%= link_to root_path, class: 'logo' do %>
+       
+        <div class="col-2">
+          <%= link_to root_path, class: 'logo' do %>
 
-            <div class="circle">
-            <br />
-            You know
-            <br />
-            you need
-            <br />
-            to code
-          </div>
-        <% end %>
-      </div>
-      <div class="col col-sm-4 hidden-xs-down slogan">
-        Splurting out unsolicited advice about entrepreneurship since 2016.
-      </div>
-      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
-        <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %> 
-        &nbsp;&nbsp;
-        <%= link_to 'About', about_path %>
-      </div>
+              <div class="circle">
+              <br />
+              Splurty
+              <br />
+              for
+              <br />
+              P&R
+            </div>
+          <% end %>
+        </div>
+        <div class="col col-sm-4 hidden-xs-down slogan">
+          Splurting out Parks and Rec's quotes since 2019.
+        </div>
+        <div class="col-5 offset-1 offset-sm-0 col-sm-5 links">
+          <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %> 
+          &nbsp;&nbsp;
+          <%= link_to 'About', about_path %>
+        </div>
 
     </header>
 
@@ -49,9 +50,9 @@
 
             <%= simple_form_for Quote.new do |f| %>
               <div class="modal-body">           
-                    <%= f.input :saying, label: "What quote would you like to add?", placeholder: "Fear is the disease. Hustle is the antidote." %>
+                    <%= f.input :saying, label: "What quote would you like to add?", placeholder: "Jogging is the worst. I know it keeps you healthy, but God, at what cost?" %>
                     <br />
-                    <%= f.input :author, label: "Who is the author to that quote?", placeholder: "Travis Kalanick" %>
+                    <%= f.input :author, label: "Which character said it?", placeholder: "Ann Perkins" %>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -76,11 +77,11 @@
       <%= yield %>
     </div>
 
-    <div class="footer">
+    <div class="footer ">
       <div class="container">
-          <div class="row">
-              <div class="col-12 col-sm-6">
-                <%= link_to "This isn't enough, I need more!", root_path, class: 'next-quote' %>
+          <div class="row align-items-center">
+              <div class="col-12 col-sm-6 next-quote">
+                <%= link_to "This isn't enough, I need more!", root_path %>
               </div>
               <div class="col-12 col-sm-6 footer-blurb">
                   Coded by <a href="https://alexandragergar.netlify.com/">Alexandra Gergar</a>
