@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Splurty is a Quote Generator using Ruby on Rails
 
-Things you may want to cover:
+You can see a live version here: https://splurty-alexandra-gergar.herokuapp.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a fun site that always the user to add and view the quotes from NBC's Park and Recs from other fans and also add their favorite quotes.
